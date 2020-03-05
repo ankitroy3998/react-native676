@@ -1,0 +1,44 @@
+import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity
+  } from 'react-native';
+class file1 extends React.Component {
+  constructor(props) {
+    super(props);
+  };
+
+  render() {
+ const {navigation} = this.props;
+
+    return (
+      <View style={styles.container}>
+         {
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('file2',{data:'Ankit'})}}>
+            <Text style={styles.innertext}>Ankit</Text>
+          </TouchableOpacity>
+        }
+      </View>
+    );
+  };
+ 
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor:'#6699ff',
+    fontWeight:'bold',
+    
+  }
+ });
+
+export default file1;
+

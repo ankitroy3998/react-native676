@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
     flex: 0.15,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    
   },
   imageformat: {width: 100, height: 100, resizeMode: 'cover'},
 });

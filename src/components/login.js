@@ -23,7 +23,7 @@ class Login extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Text>{'Username: ' + this.state.text} </Text>
+        <Text style={styles.child2}>Username</Text>
         <TextInput
           style={{
             height: 50,
@@ -33,7 +33,7 @@ class Login extends React.Component {
           }}
           onChangeText={text => this.setState({text})}
         />
-        <Text>{'Password: ' + this.state.input}</Text>
+        <Text style={styles.child2}>Password</Text>
         <TextInput
           style={{
             height: 50,
@@ -48,7 +48,7 @@ class Login extends React.Component {
             onPress={() => {
               navigation.navigate('Home');
             }}>
-            <Text>Login</Text>
+            <Text style={styles.child1}>Login</Text>
           </TouchableOpacity>
         }
       </View>
@@ -65,6 +65,14 @@ const styles = StyleSheet.create({
     backgroundColor:'#4080bf',
     fontWeight:'bold',
     
+  },
+  child1:{
+    padding:8,
+    backgroundColor:'#85a3e0',
+    fontWeight:'bold',
+  },
+  child2:{
+    fontWeight:'bold',
   },
 });
 
