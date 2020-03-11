@@ -7,6 +7,8 @@ import file1 from './src/components/file1';
 import file2 from './src/components/file2';
 import file3 from './src/components/file3';
 import {Button} from 'react-native';
+import modal from './src/components/modal';
+import nextpage from './src/components/nextpage';
 const Stack = createStackNavigator();
 
 
@@ -15,9 +17,11 @@ const MyStack = () => {
   return (
     <Stack.Navigator>
       
-      <Stack.Screen name="file1" component={file1} />
+      {/* <Stack.Screen name="file1" component={file1} />
       <Stack.Screen name="file2" component={file2} />
-      <Stack.Screen name="file3" component={file3} />
+      <Stack.Screen name="file3" component={file3} /> */}
+      <Stack.Screen name="modal" component={modal} />
+      <Stack.Screen name="nextpage" component={nextpage} />
 
       </Stack.Navigator>
   
