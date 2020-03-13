@@ -107,6 +107,8 @@ onPress=(item) =>{
 render() {
     const {navigation} = this.props;
     const {text,itemlist,isModalVisible} = this.state;
+
+   
     return (
       <SafeAreaView style={styles.container}>
          <FlatList
@@ -126,12 +128,13 @@ render() {
           }}>
 
           </FlatList>
-          <Modal isVisible={this.state.isModalVisible}
+          
+    <Modal isVisible={this.state.isModalVisible}
           animationIn='slideInDown'
           animationInTiming={500}
           onBackdropPress={this.toggleModal}>
           <View style={{ flex: 0.2,backgroundColor:'#fff' }}>
-        <Text>{text}</Text>
+        <Text style={styles.modaltext}>{text}</Text>
             <TouchableOpacity style={styles.button} onPress={this.toggleModal}  onPress={()=>{this.toggleModal(),navigation.navigate('nextpage',{data:`${text}`})}}>
                 <Text>Proceed To Next</Text>
                 </TouchableOpacity>
@@ -152,10 +155,10 @@ const styles = StyleSheet.create({
   },
   elements:
    {height:100,
-    marginLeft:10,
-    marginRight:20,
+    marginHorizontal:20,
     borderRadius:10,
-    marginBottom:20,
+    marginBottom:10,
+    padding:5,
     backgroundColor:'#80ccff'
     },
     text:{
@@ -169,6 +172,12 @@ const styles = StyleSheet.create({
         backgroundColor:'#ff9999',
         alignSelf:'center',
         fontSize:20
+    },
+    modaltext:{
+        alignSelf:'center',
+        padding:8,
+        backgroundColor:'#ffa64d',
+        marginTop:30
     }
 
 });

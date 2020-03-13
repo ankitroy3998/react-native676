@@ -16,10 +16,6 @@ const MyStack = () => {
   
   return (
     <Stack.Navigator>
-      
-      {/* <Stack.Screen name="file1" component={file1} />
-      <Stack.Screen name="file2" component={file2} />
-      <Stack.Screen name="file3" component={file3} /> */}
       <Stack.Screen name="modal" component={modal} />
       <Stack.Screen name="nextpage" component={nextpage} />
 
